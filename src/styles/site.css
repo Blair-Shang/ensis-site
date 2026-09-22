@@ -1,8 +1,5 @@
 /* NiuMa 官网 — 对齐专业开发者工具站的版式密度与层级。
- * 本文件自己 @import tailwindcss，让扫描根在官网 src；token 仍走 niuma-ui/styles.css。 */
-@import 'tailwindcss';
-
-/* 不依赖 Tailwind @layer：线上 / dev 只要一边没打出 Preflight，盒模型就会把整站宽高和按钮撑歪 */
+ * token 走 niuma-ui/styles.css。盒模型由本文件收口。 */
 *,
 *::before,
 *::after {

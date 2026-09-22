@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import tailwindcss from '@tailwindcss/vite'
 import { niumaUiHost } from '@niuma/ui/vite-plugins/niuma-ui-host'
 import { existsSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
@@ -29,7 +28,6 @@ const niumaUiRoot = resolveNiumaUiRoot()
 export default defineConfig({
   plugins: [
     vue(),
-    tailwindcss(),
     ...niumaUiHost(),
     {
       name: 'keep-dist-gitkeep',

@@ -8,6 +8,12 @@
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-08-31
+
+### 变更
+
+- 官网不再引入 Tailwind。页面样式是手写的，组件样式走 niuma-ui 2.x 的 `styles.css`。卸掉 `tailwindcss`、`@tailwindcss/vite`，以及 `site.css` 里的 `@import 'tailwindcss'`。盒模型仍由本文件收口。
+
 ## [1.2.0] - 2026-08-31
 
 ### 变更
