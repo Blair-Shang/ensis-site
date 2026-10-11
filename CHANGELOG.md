@@ -4,7 +4,7 @@
 
 格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。
 
-发版时把 `[Unreleased]` 下的条目移入新的 `## [x.y.z] - YYYY-MM-DD` 段；GitHub Release 正文由该段生成。`package.json` 的 `version`、git tag（`v*`）与本文件版本号必须一致。公开基线为 **1.0.0**。
+推送到 `main` 后自动发版：先把 `package.json` 的 `version` 改为新的 `x.y.z`，并把本次变更写成 `[Unreleased]` 下的列表条目。该版本还没有 `v*` 标签时，Release 工作流会把这些条目收成 `## [x.y.z] - YYYY-MM-DD`，提交 changelog、打标签、打包并发布 GitHub Release。`package.json`、git tag（`v*`）与本文件版本号一致。已经写好的 `## [x.y.z]` 段同样可以发布。手工推送 `v*` 标签仍会打包发版。公开基线为 **1.0.0**。
 
 ## [Unreleased]
 
@@ -14,6 +14,7 @@
 
 - 工程名由 `niuma-site` 改为 `ensis-site`。GitHub 仓库、Go module（`github.com/Blair-Shang/ensis-site/server`）、二进制与 nginx 配置文件名同步切换。从本版本起按 `ensis-site` 发版。
 - nginx 示例里的 upstream 改为 `ensis_site` / `ensis_cloud`。站点域名 `niuma007.com` 与线上路径前缀 `/niuma` 不变。桌面产品名仍为 NiuMa。
+- 推送到 `main` 后按 changelog 自动打包并发布 GitHub Release。手工推送 `v*` 标签仍会打包发版。
 
 ## [1.2.1] - 2026-08-31
 

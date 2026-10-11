@@ -44,9 +44,15 @@ bash script/start.sh
 4. 放入 [config/conf.d/ensis-site.conf](./config/conf.d/ensis-site.conf) 和 niuma007 证书
 5. `nginx -t` 后 reload
 
-## GitHub 打包
+## CI
 
-推送 `v*` 标签（须与 `package.json` 的 `version` 一致）或手动运行 Actions **Pack and Release**。
+GitHub Actions 仓库：[Blair-Shang/ensis-site](https://github.com/Blair-Shang/ensis-site)
+
+| 工作流 | 触发 | 作用 |
+|--------|------|------|
+| [CI](./.github/workflows/ci.yml) | `main` 推送 / PR | 类型检查、前端构建、Go 测试 |
+| [Release](./.github/workflows/release.yml) | `main` 推送 | `package.json` 版本尚未发布且 changelog 有列表条目时，打包 Linux/Windows amd64 并发布 GitHub Release |
+| [Pack and Release](./.github/workflows/pack.yml) | `v*` 标签 / 手动 | 手工打标签时同样打包发版；手动运行只上传 artifact |
 
 产物：
 
@@ -54,6 +60,6 @@ bash script/start.sh
 - `ensis-site-<version>-windows-amd64.zip`
 - `SHA256SUMS.txt`（GNU `sha256sum` 文本格式）
 
-Release 正文从 `CHANGELOG.md` 对应 `## [x.y.z]` 段生成；tag、`package.json` 的 `version` 与 changelog 版本号必须一致。发版前把 `[Unreleased]` 条目迁入新版本段。
+自动发版看 `package.json` 的 `x.y.z`。把本次变更写在 `[Unreleased]` 的 `-` / `*` 列表里，再推 `main`。已经写好的 `## [x.y.z]` 段同样可以发布。随后那次 changelog 提交的说明里带 `[release notes]`，用来标记版本段已经记下。
 
 CI / 打包从 npm 安装 `ensis-ui@latest`（可用变量 `NIUMA_UI_VERSION` 钉死如 `1.2.0`，或手动 Pack 时填写 `niuma_ui_version`）。不 checkout 兄弟 Git 仓。没有 GitHub 标签 `latest`。
