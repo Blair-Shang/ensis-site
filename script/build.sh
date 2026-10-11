@@ -15,7 +15,7 @@ echo "==> frontend build (embed -> server/internal/web/dist)"
 pnpm exec vue-tsc --noEmit
 pnpm exec vite build
 
-BIN="$ROOT/run/niuma-site"
+BIN="$ROOT/run/ensis-site"
 echo "==> go build -> $BIN"
 (
   cd "$ROOT/server"

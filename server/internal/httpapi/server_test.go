@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Blair-Shang/niuma-site/server/internal/config"
-	"github.com/Blair-Shang/niuma-site/server/internal/httpapi"
-	"github.com/Blair-Shang/niuma-site/server/internal/store"
+	"github.com/Blair-Shang/ensis-site/server/internal/config"
+	"github.com/Blair-Shang/ensis-site/server/internal/httpapi"
+	"github.com/Blair-Shang/ensis-site/server/internal/store"
 )
 
 func TestHealthVersion(t *testing.T) {

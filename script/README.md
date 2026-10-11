@@ -6,7 +6,7 @@
 |------|------|
 | `build` | `pnpm` 构建前端到 `server/internal/web/dist`，再 `go build` 打出单二进制（**内嵌静态资源**） |
 | `pack-release` | 校验 CHANGELOG 版本段，打出 Linux/Windows amd64 发版归档到 `output/` |
-| `start` | 后台启动 `run/niuma-site[.exe]`，写 pid / 日志 |
+| `start` | 后台启动 `run/ensis-site[.exe]`，写 pid / 日志 |
 | `stop` | 按 pid 停止 |
 | `restart` | stop + start |
 
@@ -33,14 +33,14 @@ bash script/restart.sh
 
 | 路径 | 说明 |
 |------|------|
-| `run/niuma-site.exe` / `run/niuma-site` | 可执行文件（内嵌前端） |
-| `run/niuma-site.pid` | 进程号 |
+| `run/ensis-site.exe` / `run/ensis-site` | 可执行文件（内嵌前端） |
+| `run/ensis-site.pid` | 进程号 |
 | `config/` | 启动时自动创建；`app.yaml` 首次从 `app.yaml.example` 生成 |
-| `logs/` | 启动时自动创建；业务日志 `niuma-site.log`（zap + 滚动） |
+| `logs/` | 启动时自动创建；业务日志 `ensis-site.log`（zap + 滚动） |
 | `data/` | 启动时自动创建；`download-stats.json` 累计下载 |
 
 默认监听 `http://127.0.0.1:8080/`（`http_addr`，见 `config/app.yaml.example`）。
 
-日志使用 **uber-go/zap** + lumberjack 滚动，文件位于 `logs/niuma-site.log`。
+日志使用 **uber-go/zap** + lumberjack 滚动，文件位于 `logs/ensis-site.log`。
 
 开发联调仍可用 `pnpm dev` + `pnpm dev:server`（Vite 热更新，不走内嵌）。

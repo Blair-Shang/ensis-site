@@ -20,9 +20,9 @@ fi
 VERSION="${VERSION#v}"
 
 OUT="$ROOT/output"
-PKG_DIR="niuma-site"
-LINUX_TAR="$OUT/niuma-site-${VERSION}-linux-amd64.tar.gz"
-WIN_ZIP="$OUT/niuma-site-${VERSION}-windows-amd64.zip"
+PKG_DIR="ensis-site"
+LINUX_TAR="$OUT/ensis-site-${VERSION}-linux-amd64.tar.gz"
+WIN_ZIP="$OUT/ensis-site-${VERSION}-windows-amd64.zip"
 STAGE_LINUX="$OUT/stage-linux/${PKG_DIR}"
 STAGE_WIN="$OUT/stage-windows/${PKG_DIR}"
 
@@ -35,8 +35,8 @@ node "$ROOT/.github/scripts/changelog-notes.mjs" "$VERSION" "$OUT/release-notes.
 
 if [[ "${SKIP_INSTALL:-}" != "1" ]]; then
   echo "==> pnpm install"
-  if [[ -d "$ROOT/../niuma-ui" ]]; then
-    pnpm --dir "$ROOT/../niuma-ui" install --frozen-lockfile
+  if [[ -d "$ROOT/../ensis-ui" ]]; then
+    pnpm --dir "$ROOT/../ensis-ui" install --frozen-lockfile
   fi
   pnpm install --frozen-lockfile
 fi
@@ -57,9 +57,9 @@ echo "==> go build linux-amd64 / windows-amd64 (version=${VERSION})"
 (
   cd "$ROOT/server"
   CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags="$LDFLAGS" \
-    -o "$STAGE_LINUX/run/niuma-site" ./cmd/server
+    -o "$STAGE_LINUX/run/ensis-site" ./cmd/server
   CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -trimpath -ldflags="$LDFLAGS" \
-    -o "$STAGE_WIN/run/niuma-site.exe" ./cmd/server
+    -o "$STAGE_WIN/run/ensis-site.exe" ./cmd/server
 )
 
 copy_runtime() {
@@ -69,7 +69,7 @@ copy_runtime() {
   cp "$ROOT/CHANGELOG.md" "$dest/CHANGELOG.md"
   cp "$ROOT/config/app.yaml.example" "$dest/config/app.yaml.example"
   mkdir -p "$dest/config/conf.d"
-  cp "$ROOT/config/conf.d/niuma-site.conf" "$dest/config/conf.d/niuma-site.conf"
+  cp "$ROOT/config/conf.d/ensis-site.conf" "$dest/config/conf.d/ensis-site.conf"
   cp "$ROOT/script/README.md" "$dest/script/README.md"
 }
 
@@ -77,7 +77,7 @@ copy_runtime "$STAGE_LINUX"
 cp "$ROOT/script/start.sh" "$STAGE_LINUX/script/start.sh"
 cp "$ROOT/script/stop.sh" "$STAGE_LINUX/script/stop.sh"
 cp "$ROOT/script/restart.sh" "$STAGE_LINUX/script/restart.sh"
-chmod +x "$STAGE_LINUX/run/niuma-site" "$STAGE_LINUX/script/"*.sh
+chmod +x "$STAGE_LINUX/run/ensis-site" "$STAGE_LINUX/script/"*.sh
 
 copy_runtime "$STAGE_WIN"
 cp "$ROOT/script/start.ps1" "$STAGE_WIN/script/start.ps1"

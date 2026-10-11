@@ -1,4 +1,4 @@
-module github.com/Blair-Shang/niuma-site/server
+module github.com/Blair-Shang/ensis-site/server
 
 go 1.24.0
 

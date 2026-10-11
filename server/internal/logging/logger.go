@@ -59,7 +59,7 @@ func New(opt Options) (*zap.Logger, error) {
 	encCfg.EncodeCaller = zapcore.ShortCallerEncoder
 
 	fileWriter := zapcore.AddSync(&lumberjack.Logger{
-		Filename:   filepath.Join(opt.Dir, "niuma-site.log"),
+		Filename:   filepath.Join(opt.Dir, "ensis-site.log"),
 		MaxSize:    opt.MaxSizeMB,
 		MaxBackups: opt.MaxBackups,
 		MaxAge:     opt.MaxAgeDays,

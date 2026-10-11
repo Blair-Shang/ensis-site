@@ -2,7 +2,7 @@
  * 官网用的 @niuma/ui 薄封装：只 re-export 营销站需要的 Rs* 组件。
  * 禁止从此处导出 Monaco / Terminal / Table 等重型业务控件，避免打进静态包。
  *
- * 从主入口具名导入。niumaUiHost 只服务 pnpm dev；vite build 走包主入口。
+ * 从主入口具名导入。ensisUiHost 只服务 pnpm dev；vite build 走包主入口。
  * 用法：`import { RsButton, RsCard } from '@/ui'`
  */
 export {

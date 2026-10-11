@@ -1,12 +1,19 @@
 # 变更日志
 
-本文件记录 niuma-site 的重要变更。
+本文件记录 ensis-site 的重要变更。
 
 格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。
 
 发版时把 `[Unreleased]` 下的条目移入新的 `## [x.y.z] - YYYY-MM-DD` 段；GitHub Release 正文由该段生成。`package.json` 的 `version`、git tag（`v*`）与本文件版本号必须一致。公开基线为 **1.0.0**。
 
 ## [Unreleased]
+
+## [2.0.0] - 2026-10-11
+
+### 变更
+
+- 工程名由 `niuma-site` 改为 `ensis-site`。GitHub 仓库、Go module（`github.com/Blair-Shang/ensis-site/server`）、二进制与 nginx 配置文件名同步切换。从本版本起按 `ensis-site` 发版。
+- nginx 示例里的 upstream 改为 `ensis_site` / `ensis_cloud`。站点域名 `niuma007.com` 与线上路径前缀 `/niuma` 不变。桌面产品名仍为 NiuMa。
 
 ## [1.2.1] - 2026-08-31
 

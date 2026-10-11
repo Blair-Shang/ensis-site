@@ -15,7 +15,7 @@ Write-Host "==> frontend build (embed -> server/internal/web/dist)"
 pnpm exec vue-tsc --noEmit
 pnpm exec vite build
 
-$Exe = Join-Path $RunDir "niuma-site.exe"
+$Exe = Join-Path $RunDir "ensis-site.exe"
 Write-Host "==> go build -> $Exe"
 Push-Location (Join-Path $Root "server")
 try {

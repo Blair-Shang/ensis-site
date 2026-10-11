@@ -9,8 +9,8 @@ $RunDir = Join-Path $Root "run"
 $ConfigDir = Join-Path $Root "config"
 $LogDir = Join-Path $Root "logs"
 $DataDir = Join-Path $Root "data"
-$Exe = Join-Path $RunDir "niuma-site.exe"
-$PidFile = Join-Path $RunDir "niuma-site.pid"
+$Exe = Join-Path $RunDir "ensis-site.exe"
+$PidFile = Join-Path $RunDir "ensis-site.pid"
 $BootstrapErr = Join-Path $LogDir "bootstrap.err"
 
 if (-not (Test-Path $Exe)) {
@@ -44,5 +44,5 @@ $proc = Start-Process -FilePath $Exe `
 Set-Content -Path $PidFile -Value $proc.Id -Encoding ascii
 Write-Host "Started pid=$($proc.Id)"
 Write-Host "Config: $ConfigDir"
-Write-Host "Logs:   $(Join-Path $LogDir 'niuma-site.log')"
+Write-Host "Logs:   $(Join-Path $LogDir 'ensis-site.log')"
 Write-Host "URL:    http://127.0.0.1:8080/"

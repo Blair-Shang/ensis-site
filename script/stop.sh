@@ -4,7 +4,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-PID_FILE="$ROOT/run/niuma-site.pid"
+PID_FILE="$ROOT/run/ensis-site.pid"
 
 if [[ ! -f "$PID_FILE" ]]; then
   echo "Not running (no pid file)."

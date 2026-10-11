@@ -1,6 +1,6 @@
 {
-  "name": "niuma-site",
-  "version": "1.2.1",
+  "name": "ensis-site",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "description": "NiuMa 官方网站（niuma007.com）— 工作室品牌站与产品矩阵入口",
@@ -8,7 +8,7 @@
     "dev": "vite",
     "dev:server": "go run -C server ./cmd/server",
     "build": "vue-tsc --noEmit && vite build",
-    "build:server": "go build -C server -o ../run/niuma-site.exe ./cmd/server",
+    "build:server": "go build -C server -o ../run/ensis-site.exe ./cmd/server",
     "build:all": "powershell -ExecutionPolicy Bypass -File script/build.ps1",
     "ci": "pnpm typecheck && pnpm test:server",
     "pack:release": "bash script/pack-release.sh",
@@ -20,7 +20,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@niuma/ui": "link:../niuma-ui",
+    "@niuma/ui": "link:../ensis-ui",
     "vue": "^3.5.39",
     "vue-router": "^5.1.0"
   },

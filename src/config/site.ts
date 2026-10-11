@@ -7,7 +7,7 @@ export const siteConfig = {
     'NiuMa — 工作室品牌与旗舰 AI 运维桌面平台。数据库、SQL、监控与工具链一体。',
   apiBase: (import.meta.env.VITE_SITE_API_BASE || '').replace(/\/$/, ''),
   /**
-   * niuma-cloud API 基址（含 /niuma/cloud 前缀，不含 /api/v1）。
+   * ensis-cloud API 基址（含 /niuma/cloud 前缀，不含 /api/v1）。
    * 开发默认本地；生产默认 https://www.niuma007.com/niuma/cloud
    */
   cloudApiBase: (

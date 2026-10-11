@@ -37,7 +37,7 @@ async function readError(res: Response): Promise<string> {
   return code
 }
 
-/** 提交到 niuma-cloud（非本站 API） */
+/** 提交到 ensis-cloud（非本站 API） */
 export async function submitSiteFeedback(payload: FeedbackPayload): Promise<{ id: string }> {
   const res = await fetch(`${cloudBase()}/api/v1/feedback`, {
     method: 'POST',

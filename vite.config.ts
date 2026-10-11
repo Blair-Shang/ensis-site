@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { niumaUiHost } from '@niuma/ui/vite-plugins/niuma-ui-host'
+import { ensisUiHost } from '@niuma/ui/vite-plugins/ensis-ui-host'
 import { existsSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import { dirname, resolve } from 'node:path'
@@ -9,26 +9,26 @@ const require = createRequire(import.meta.url)
 
 /** 定位 @niuma/ui 包根，仅给 dev server 放行读取（link 到兄弟仓时需要）。 */
 function resolveNiumaUiRoot(): string {
-  const sibling = resolve(__dirname, '../niuma-ui')
+  const sibling = resolve(__dirname, '../ensis-ui')
   if (existsSync(resolve(sibling, 'package.json'))) {
     return sibling
   }
   try {
     return dirname(require.resolve('@niuma/ui/package.json'))
   } catch {
-    return dirname(require.resolve('niuma-ui/package.json'))
+    return dirname(require.resolve('ensis-ui/package.json'))
   }
 }
 
 const niumaUiRoot = resolveNiumaUiRoot()
 
 /**
- * niumaUiHost：只服务 pnpm dev（源码 HMR）。vite build 走包主入口。
+ * ensisUiHost：只服务 pnpm dev（源码 HMR）。vite build 走包主入口。
  */
 export default defineConfig({
   plugins: [
     vue(),
-    ...niumaUiHost(),
+    ...ensisUiHost(),
     {
       name: 'keep-dist-gitkeep',
       closeBundle() {

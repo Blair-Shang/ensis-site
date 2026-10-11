@@ -8,9 +8,9 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/Blair-Shang/niuma-site/server/internal/config"
-	"github.com/Blair-Shang/niuma-site/server/internal/ratelimit"
-	"github.com/Blair-Shang/niuma-site/server/internal/store"
+	"github.com/Blair-Shang/ensis-site/server/internal/config"
+	"github.com/Blair-Shang/ensis-site/server/internal/ratelimit"
+	"github.com/Blair-Shang/ensis-site/server/internal/store"
 )
 
 // Server 官网 HTTP 服务：下载计次 API、健康检查与内嵌静态资源。

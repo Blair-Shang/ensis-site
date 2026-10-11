@@ -23,7 +23,7 @@ http {
                     '"$http_user_agent"';
     access_log /data/nginx/logs/access.log main;
 
-    # 下载入口限请求；安装包限并发（location 见 conf.d/niuma-site.conf）
+    # 下载入口限请求；安装包限并发（location 见 conf.d/ensis-site.conf）
     limit_req_zone  $binary_remote_addr zone=niuma_dl_latest:10m rate=60r/s;
     limit_conn_zone $binary_remote_addr zone=niuma_dl_conn:10m;
 

@@ -10,8 +10,8 @@ RUN="$ROOT/run"
 CONFIG="$ROOT/config"
 LOGS="$ROOT/logs"
 DATA="$ROOT/data"
-BIN="$RUN/niuma-site"
-PID_FILE="$RUN/niuma-site.pid"
+BIN="$RUN/ensis-site"
+PID_FILE="$RUN/ensis-site.pid"
 BOOTSTRAP_ERR="$LOGS/bootstrap.err"
 
 if [[ ! -x "$BIN" && ! -f "$BIN" ]]; then
@@ -41,5 +41,5 @@ nohup "$BIN" >/dev/null 2>>"$BOOTSTRAP_ERR" &
 echo $! >"$PID_FILE"
 echo "Started pid=$(cat "$PID_FILE")"
 echo "Config: $CONFIG"
-echo "Logs:   $LOGS/niuma-site.log"
+echo "Logs:   $LOGS/ensis-site.log"
 echo "URL:    http://127.0.0.1:8080/"

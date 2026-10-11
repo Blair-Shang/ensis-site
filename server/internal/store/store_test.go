@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Blair-Shang/niuma-site/server/internal/store"
+	"github.com/Blair-Shang/ensis-site/server/internal/store"
 )
 
 func TestFileRecordAndStats(t *testing.T) {
