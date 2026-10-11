@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RsButton } from '@/ui'
 import { useRoute, useRouter } from 'vue-router'
+import { siteConfig } from '../config/site'
 
 const router = useRouter()
 const route = useRoute()
@@ -27,7 +28,7 @@ function isActive(to: string) {
     <div class="site-container site-header__shell">
       <RouterLink to="/" class="site-header__brand">
         <img src="/brand/app-icon.svg" alt="" width="26" height="26" />
-        <span>NiuMa</span>
+        <span>{{ siteConfig.name }}</span>
       </RouterLink>
 
       <nav class="site-header__nav" aria-label="主导航">

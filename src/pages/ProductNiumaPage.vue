@@ -28,9 +28,9 @@ const highlights = [
     <div class="site-container">
       <header class="site-page-head">
         <p class="site-section__eyebrow">Product</p>
-        <h1>NiuMa 桌面端</h1>
+        <h1>ensis-ops</h1>
         <p>
-          全能 AI 运维平台：连接管理、SQL、数据浏览、监控与外部工具链收敛到同一桌面工作台。
+          Ensis 的旗舰桌面产品（官网域名 niuma007.com）：连接管理、SQL、数据浏览、监控与外部工具链收敛到同一桌面工作台。
         </p>
         <div class="site-cta-row">
           <RsButton

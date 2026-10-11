@@ -10,7 +10,7 @@ const columns = [
     title: '产品',
     links: [
       { label: '产品矩阵', to: '/products' },
-      { label: 'NiuMa 桌面端', to: '/products/niuma' },
+      { label: 'ensis-ops', to: '/products/niuma' },
       { label: '下载', to: '/download' },
     ],
   },

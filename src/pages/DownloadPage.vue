@@ -172,7 +172,7 @@ onMounted(async () => {
     <div class="site-container">
       <header class="site-page-head">
         <p class="site-section__eyebrow">Download</p>
-        <h1>下载 NiuMa</h1>
+        <h1>下载 ensis-ops</h1>
         <p>
           推荐下载 Windows 正式版。Linux 与 macOS 目前为预览版，功能与稳定性仍在完善中。
         </p>

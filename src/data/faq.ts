@@ -87,7 +87,7 @@ export const faqItems: FaqItem[] = [
     answer: [
       {
         kind: 'text',
-        html: '这是 Windows 用户账户控制（UAC）的标准提示。NiuMa 安装程序需要写入 Program Files 并创建开始菜单快捷方式，请选择 <strong>是</strong>。',
+        html: '这是 Windows 用户账户控制（UAC）的标准提示。默认安装 ensis-ops 到当前用户目录，不需要管理员权限。只有选择为所有用户安装、写入 Program Files 时才会出现此提示，请选择 <strong>是</strong>。',
       },
       {
         kind: 'text',
@@ -127,7 +127,7 @@ export const faqItems: FaqItem[] = [
         items: [
           '优先尝试：在 Finder 中 <strong>按住 Control 键点击</strong> 安装包或 .app，选择 <strong>打开</strong>，在对话框中再次确认打开。',
           '若仍被拦：打开 <strong>系统设置 → 隐私与安全性</strong>，在页面底部找到被拦应用的 <strong>仍要打开</strong>（Open Anyway）。',
-          '浏览器下载的文件可能带隔离标记；终端可执行 <code>xattr -dr com.apple.quarantine /path/to/NiuMa.app</code> 后重试（将路径换成实际位置）。',
+          '浏览器下载的文件可能带隔离标记；终端可执行 <code>xattr -dr com.apple.quarantine /path/to/ensis-ops.app</code> 后重试（将路径换成实际位置）。',
         ],
       },
       {
@@ -149,7 +149,7 @@ export const faqItems: FaqItem[] = [
       {
         kind: 'list',
         items: [
-          '<strong>.run 安装脚本</strong>：先 <code>chmod +x NiuMa-*.run</code>，再 <code>./NiuMa-*.run</code>；写入系统目录时安装器会提示输入 sudo 密码。',
+          '<strong>.run 安装脚本</strong>：先 <code>chmod +x ensis-ops-*.run</code>，再 <code>./ensis-ops-*.run</code>；写入系统目录时安装器会提示输入 sudo 密码。',
           '<strong>.deb 包</strong>：使用 <code>sudo dpkg -i 包名.deb</code> 或图形化软件中心安装，需要管理员权限。',
           '若提示「Permission denied」，检查文件是否有执行权限，或是否在只读目录中运行。',
         ],
@@ -184,7 +184,7 @@ export const faqItems: FaqItem[] = [
     answer: [
       {
         kind: 'text',
-        html: '打开 NiuMa，进入菜单中的 <strong>关于</strong> 或 <strong>更新日志</strong>，可查看当前版本并检查是否有新版本。',
+        html: '打开 ensis-ops，进入菜单中的 <strong>关于</strong> 或 <strong>更新日志</strong>，可查看当前版本并检查是否有新版本。',
       },
       {
         kind: 'text',
@@ -212,12 +212,12 @@ export const faqItems: FaqItem[] = [
   {
     id: 'what-is-niuma',
     category: 'product',
-    question: 'NiuMa 是什么？适合谁使用？',
+    question: 'ensis-ops 是什么？适合谁使用？',
     tags: ['介绍', '数据库', '运维', 'sql'],
     answer: [
       {
         kind: 'text',
-        html: 'NiuMa 是面向开发与运维人员的专业桌面工作台，整合数据库管理、SQL、监控与 AI 辅助等能力，减少多工具切换成本。',
+        html: 'ensis-ops 是 Ensis 的旗舰桌面工作台，面向开发与运维人员，整合数据库管理、SQL、监控与 AI 辅助等能力。官网域名仍为 niuma007.com。',
       },
       {
         kind: 'text',
@@ -237,7 +237,7 @@ export const faqItems: FaqItem[] = [
       },
       {
         kind: 'text',
-        html: '使用云端账户、更新检查等功能时会与 NiuMa 云服务通信，具体范围以客户端内说明为准。',
+        html: '使用云端账户、更新检查等功能时会与 Ensis 云服务通信（域名 niuma007.com），具体范围以客户端内说明为准。',
       },
     ],
   },
@@ -266,7 +266,7 @@ export const faqItems: FaqItem[] = [
       {
         kind: 'list',
         items: [
-          'NiuMa 版本号（关于对话框或安装包文件名）。',
+          'ensis-ops 版本号（关于对话框或安装包文件名）。',
           '操作系统与架构（如 Windows 11 x64）。',
           '可复现步骤；涉及数据库时说明引擎类型，勿粘贴敏感数据。',
         ],

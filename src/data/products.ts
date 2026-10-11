@@ -23,14 +23,14 @@ export interface ProductShot {
 export const niumaDesktopShots: ProductShot[] = [
   {
     src: '/product/niuma-ops-workbench.png',
-    alt: 'NiuMa 桌面端运维监控工作台：连接树、进程列表与 CPU 状态分析',
+    alt: 'ensis-ops 运维监控工作台：连接树、进程列表与 CPU 状态分析',
     caption: '运维监控工作台',
     width: 1024,
     height: 640,
   },
   {
     src: '/product/niuma-db-workbench.png',
-    alt: 'NiuMa 桌面端数据库工作台：对象树、表数据浏览与日期编辑',
+    alt: 'ensis-ops 数据库工作台：对象树、表数据浏览与日期编辑',
     caption: '数据库工作台',
     width: 1024,
     height: 640,
@@ -44,7 +44,7 @@ export const niumaDesktopShot = niumaDesktopShots[0].src
 export const products: ProductCardItem[] = [
   {
     id: 'niuma-desktop',
-    name: 'NiuMa',
+    name: 'ensis-ops',
     tagline: '全能 AI 运维平台：数据库会话、SQL、监控与工具链一体。',
     status: 'ga',
     to: '/products/niuma',

@@ -1,6 +1,6 @@
 # ensis-site
 
-[niuma007.com](https://niuma007.com) 官方网站：Vue 前端 + Go API（静态资源内嵌进 Go 二进制）。
+Ensis 官方网站，域名仍为 [niuma007.com](https://niuma007.com)：Vue 前端 + Go API（静态资源内嵌进 Go 二进制）。旗舰桌面产品为 ensis-ops。
 
 ## 开发
 

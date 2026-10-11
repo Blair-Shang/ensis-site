@@ -1,10 +1,10 @@
 /** 站点公开配置（构建期环境变量） */
 
 export const siteConfig = {
-  name: 'NiuMa',
+  name: 'Ensis',
   tagline: '专业开发与运维工具',
   description:
-    'NiuMa — 工作室品牌与旗舰 AI 运维桌面平台。数据库、SQL、监控与工具链一体。',
+    'Ensis — 工作室品牌站（niuma007.com）。旗舰桌面产品 ensis-ops：数据库、SQL、监控与工具链一体。',
   apiBase: (import.meta.env.VITE_SITE_API_BASE || '').replace(/\/$/, ''),
   /**
    * ensis-cloud API 基址（含 /niuma/cloud 前缀，不含 /api/v1）。

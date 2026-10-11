@@ -44,9 +44,9 @@ onMounted(async () => {
           height="68"
         />
         <p class="site-hero__kicker">{{ siteConfig.tagline }}</p>
-        <h1 id="site-hero-title" class="site-hero__title">NiuMa</h1>
+        <h1 id="site-hero-title" class="site-hero__title">{{ siteConfig.name }}</h1>
         <p class="site-hero__lead">
-          面向数据库与运维场景的 AI 桌面平台。把会话、SQL、监控与工具链收敛到一个专业工作台。
+          旗舰桌面产品 ensis-ops：面向数据库与运维场景的 AI 工作台。把会话、SQL、监控与工具链收敛到一个专业桌面。
         </p>
         <div class="site-hero__actions">
           <RsButton
@@ -82,7 +82,7 @@ onMounted(async () => {
     <section class="site-section site-section--muted">
       <div class="site-container">
         <div class="site-section__head">
-          <p class="site-section__eyebrow">Why NiuMa</p>
+          <p class="site-section__eyebrow">Why {{ siteConfig.name }}</p>
           <h2 class="site-section__title">为专业运维工作流而设计</h2>
           <p class="site-section__desc">
             不是功能堆叠的面板集合，而是一条从连接到执行、从排查到变更的连续路径。

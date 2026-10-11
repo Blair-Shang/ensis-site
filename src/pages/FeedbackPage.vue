@@ -65,7 +65,7 @@ async function lookup() {
         <p class="site-section__eyebrow">Support</p>
         <h1>问题反馈</h1>
         <p>
-          帮助我们改进 NiuMa。提交前可先查阅
+          帮助我们改进 ensis-ops。提交前可先查阅
           <RouterLink to="/faq">常见问题</RouterLink>；提交后请保存工单号，可在下方查询官方回复（桌面登录用户请在客户端「我的反馈」查看）。
         </p>
       </header>
@@ -89,7 +89,7 @@ async function lookup() {
             v-model="body"
             rows="8"
             required
-            placeholder="复现步骤、期望结果、系统与 NiuMa 版本（勿粘贴敏感数据）"
+            placeholder="复现步骤、期望结果、系统与 ensis-ops 版本（勿粘贴敏感数据）"
           />
         </label>
         <label class="feedback-field">
@@ -143,7 +143,7 @@ async function lookup() {
       <div class="site-prose" style="margin-top: 2.75rem">
         <h2>提交前建议准备</h2>
         <ul>
-          <li>NiuMa 版本号（关于对话框或安装包文件名）</li>
+          <li>ensis-ops 版本号（关于对话框或安装包文件名）</li>
           <li>操作系统版本</li>
           <li>可复现步骤；涉及数据库时说明引擎类型（无需粘贴敏感数据）</li>
         </ul>

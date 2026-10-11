@@ -14,7 +14,7 @@ const router = useRouter()
         <h1>关于 {{ siteConfig.name }}</h1>
         <p>
           {{ siteConfig.name }}
-          是工作室品牌与旗舰产品共用名。我们专注专业开发与运维工具，官网承载品牌与产品矩阵，桌面端在独立工程中持续交付。
+          是工作室品牌。官网域名仍为 niuma007.com。我们专注专业开发与运维工具：官网承载品牌与产品矩阵，旗舰桌面产品 ensis-ops 在独立工程中持续交付。
         </p>
       </header>
 
